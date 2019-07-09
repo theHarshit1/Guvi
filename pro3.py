@@ -1,11 +1,11 @@
 x,y=input().strip().split(" ")
-c=0
+count=0
 for a ,b in zip(x,y):
 	if(a==b):
-		c+=1
+		count+=1
 cost=0
 if(len(x)>len(y)):
-	cost=len(x)-c
+	cost=len(x)-count
 else:
-	cost=len(y)-c
+	cost=len(y)-count
 print(cost)
