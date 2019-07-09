@@ -1,8 +1,7 @@
 n,k=input().strip().split(" ")
 k=int(k)
 i=0;
-size=len(n)
-while i<size-1 and k:
+while i<len(n)-1 and k:
 	if(n[i]>n[i+1]):
 		k-=1
 		n=n.replace(n[i],"")
