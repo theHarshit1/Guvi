@@ -4,7 +4,7 @@ i=0;
 while i<len(n)-1 and k:
 	if(n[i]>n[i+1]):
 		k-=1
-		n=n.replace(n[i],"")
+		n=n[:i]+n[i+1:]
 		if(i!=0):
 			i-=1
 	else:
