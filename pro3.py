@@ -1,11 +1,18 @@
 x,y=input().strip().split(" ")
-count=0
-for a ,b in zip(x,y):
-	if(a==b):
-		count+=1
-cost=0
-if(len(x)>len(y)):
-	cost=len(x)-count
-else:
-	cost=len(y)-count
+max=[]
+f=0
+for i in range(len(y)):
+	prev=0
+	l=[]
+	for j in y[i:]:
+		for k in range(prev,len(x)):
+			if(j==x[k]):
+				l.append(k)
+				prev=k+1
+				break
+	if(len(l)>len(max)):
+		max=l
+res=x[max[0]:max[len(max)-1]+1]
+cost=len(x)-len(res)
 print(cost)
+print(len(y)-len(res)+cost)
