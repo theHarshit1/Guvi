@@ -1,18 +1,11 @@
-x,y=input().strip().split(" ")
-max=[]
-f=0
-for i in range(len(y)):
-	prev=0
-	l=[]
-	for j in y[i:]:
-		for k in range(prev,len(x)):
-			if(j==x[k]):
-				l.append(k)
-				prev=k+1
-				break
-	if(len(l)>len(max)):
-		max=l
-res=x[max[0]:max[len(max)-1]+1]
-cost=len(x)-len(res)
-print(cost)
-print(len(y)-len(res)+cost)
+x,y=input().split()
+cost=0
+n=min(len(x),len(y))
+for i in range(n):
+  if len(y)==1 and y[0] in x:
+    break
+  if len(x)==1 and x[0] in y:
+    break
+  if x[i]!=y[i]:
+    cost=cost+1
+print(abs(len(x)-len(y))+cost)
