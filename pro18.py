@@ -8,7 +8,8 @@ for i in range(len(l)):
 	l[i]=l[i].replace(' ','')
 lengths=[]
 for i in l:
-	lengths.append(len(i))
+	if(len(i)>0):
+		lengths.append(len(i))
 m=min(lengths)
 r='1 '*m
 r=r.strip()
