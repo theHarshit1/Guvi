@@ -11,4 +11,3 @@ for i in range(len(coins)):
 		if(count==k):
 			print(c)
 			return
-			
