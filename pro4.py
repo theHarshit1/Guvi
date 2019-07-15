@@ -6,7 +6,8 @@ else:
 cost=0
 for i in range(n):
 	if x[i]!=y[i]:
-		cost+=abs(ord(x[i])-ord(y[i]))
+		print(abs(ord(x[i])-ord(y[i])))
+		# cost+=abs(ord(x[i])-ord(y[i]))
 z=x[n:]+y[n:]
 for i in z:
 	cost+=ord(i)-96

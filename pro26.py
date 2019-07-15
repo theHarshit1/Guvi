@@ -1,13 +1,13 @@
+c=[]
+def sub(a,prev,count):
+	if(a[0]>prev):
+		count+=1
+		c.append(count)
+		if(len(a)>1):
+			sub(a[1:],a[0],count)
+	if(len(a)>1):
+		sub(a[1:],a[1],1)
 n=input()
 l=list(map(int,input().split()))
-max=0
-for i in range(len(l)):
-	c=0
-	prev=l[i]
-	for j in range(i+1,len(l)):
-		if(l[j]>prev):
-			c+=1
-			prev=l[j]
-	if(c>max):
-		max=c
-print(max)
+sub(l,0,1)
+print(c)
