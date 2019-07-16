@@ -1,10 +1,20 @@
 s=input()
-m=0
-j=0
-for i in s:
-	j+=1
-	if(i=='c'):
-		if(j>m):
-			m=j
-		j=0
-print(max(j,m))
+minimum=len(s)
+i=0
+while(i<minimum):
+	m=0
+	k=0
+	for j in range(len(s)):
+		k+=1
+		if(s[i]==s[j]):
+			if(k>m):
+				m=k
+			k=0
+		if(k>minimum):
+			break
+	if(k>m):
+		m=k
+	if(m<minimum):
+		minimum=m
+	i+=1
+print(minimum)
