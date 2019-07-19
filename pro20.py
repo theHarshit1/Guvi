@@ -1,13 +1,12 @@
-n,k=map(int,input().split())
-coins=list(map(int,input().split()))
-coins=sorted(coins,reverse=True)
-for i in range(len(coins)):
-	c=0
-	for j in coins[:i+1]:
-		while(count<k):
-			c+=1
-			res.append(coins[j])
-			count=coins[0]
-		if(count==k):
-			print(c)
-			return
+def coinSum(index,count,s):
+	if(s==v):
+		print(count)
+		return
+	if(s<v):
+		coinSum(index,count+1,s+coins[index])
+		if index<len(coins)-1:
+			coinSum(index+1,count+1,s)
+
+n,v=map(int,input().split())
+coins=sorted(list(map(int,input().split())),reverse=True)
+coinSum(0,1,coins[0])
