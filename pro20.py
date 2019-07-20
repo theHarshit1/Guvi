@@ -1,7 +1,7 @@
 def coinSum(index,count,s):
 	if(s==v):
 		print(count)
-		return
+		exit()
 	if(s<v):
 		coinSum(index,count+1,s+coins[index])
 		if index<len(coins)-1:
@@ -9,4 +9,4 @@ def coinSum(index,count,s):
 
 n,v=map(int,input().split())
 coins=sorted(list(map(int,input().split())),reverse=True)
-coinSum(0,1,coins[0])
+coinSum(0,0,0)
