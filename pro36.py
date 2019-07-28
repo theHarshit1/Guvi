@@ -10,6 +10,7 @@ def increase(i,prev,c):
 s=0
 n=int(input())
 l=list(map(int,input().split()))
+n=len(l)
 for i in range(n-2):
 	increase(i+1,l[i],1)
 print(s)
