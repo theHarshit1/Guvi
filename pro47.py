@@ -2,7 +2,7 @@ n,k=map(int,input().split())
 ten=1
 i=1
 temp=str(n)
-while(len(temp)-len(temp.rstrip('0'))!=k):
+while(len(temp)-len(temp.rstrip('0'))<k):
 	ten=10*i
 	temp=str(n*ten)
 	i+=1
