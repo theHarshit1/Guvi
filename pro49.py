@@ -1,0 +1,21 @@
+s1=input()
+s2=input()
+i=1
+if(len(s1)<len(s2)):
+	i=len(s1)
+else:
+	i=len(s2)
+	s1,s2=s2,s1
+while(i>0 and len(s2)%i is not 0):
+	i//=2
+if(i==0):
+	print(0)
+	exit()
+d=len(s2)//i
+c=0
+while(i>0):
+	if(s1[:i]*d==s2):
+		c+=1
+	i//=2
+	d*=2
+print(c)
